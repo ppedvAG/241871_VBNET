@@ -1,4 +1,9 @@
-﻿Public Class Fahrzeug
+﻿
+''' <summary>
+''' The class Fahrzeug
+''' </summary>
+''' <remarks>Fahrs zeugs</remarks>
+Public Class Fahrzeug
     'felder
     Private _farbe As String 'backing field
     'Public hersteller As String
@@ -14,6 +19,9 @@
         End Set
     End Property
 
+    ''' <summary>
+    ''' The manufacturer of the vehicle
+    ''' </summary>
     Public Property Hersteller As String 'auto Property
     Public Property Modell As String 'auto Property
     Public ReadOnly Property Kennzeichen As String 'auto Property
