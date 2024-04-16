@@ -64,6 +64,9 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Bike.vb" />
+    <Compile Include="Car.vb" />
+    <Compile Include="EngineType.vb" />
     <Compile Include="Vehicle.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">

@@ -54,7 +54,7 @@ Partial Class Form1
         Me.Label1.Font = New System.Drawing.Font("Eras Medium ITC", 36.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.Location = New System.Drawing.Point(0, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(800, 450)
+        Me.Label1.Size = New System.Drawing.Size(1232, 484)
         Me.Label1.TabIndex = 3
         Me.Label1.Text = "Label1"
         Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -82,7 +82,7 @@ Partial Class Form1
         'Button2
         '
         Me.Button2.BackColor = System.Drawing.Color.Yellow
-        Me.Button2.Location = New System.Drawing.Point(12, 113)
+        Me.Button2.Location = New System.Drawing.Point(106, 152)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(328, 193)
         Me.Button2.TabIndex = 6
@@ -93,7 +93,7 @@ Partial Class Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(12.0!, 25.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.ClientSize = New System.Drawing.Size(1232, 484)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.ListBox1)

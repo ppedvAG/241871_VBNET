@@ -23,10 +23,12 @@ Partial Class Form1
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.FlowLayoutPanel1 = New System.Windows.Forms.FlowLayoutPanel()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.showTestCarsButton = New System.Windows.Forms.Button()
         Me.Button4 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Button3 = New System.Windows.Forms.Button()
+        Me.Button5 = New System.Windows.Forms.Button()
+        Me.Button6 = New System.Windows.Forms.Button()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.SaveFileDialog1 = New System.Windows.Forms.SaveFileDialog()
         Me.FlowLayoutPanel1.SuspendLayout()
@@ -38,26 +40,28 @@ Partial Class Form1
         Me.FlowLayoutPanel1.AutoSize = True
         Me.FlowLayoutPanel1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
         Me.FlowLayoutPanel1.BackColor = System.Drawing.Color.SteelBlue
-        Me.FlowLayoutPanel1.Controls.Add(Me.Button1)
+        Me.FlowLayoutPanel1.Controls.Add(Me.showTestCarsButton)
         Me.FlowLayoutPanel1.Controls.Add(Me.Button4)
         Me.FlowLayoutPanel1.Controls.Add(Me.Button2)
         Me.FlowLayoutPanel1.Controls.Add(Me.Button3)
+        Me.FlowLayoutPanel1.Controls.Add(Me.Button5)
+        Me.FlowLayoutPanel1.Controls.Add(Me.Button6)
         Me.FlowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Top
         Me.FlowLayoutPanel1.Location = New System.Drawing.Point(0, 0)
         Me.FlowLayoutPanel1.Name = "FlowLayoutPanel1"
         Me.FlowLayoutPanel1.Size = New System.Drawing.Size(800, 29)
         Me.FlowLayoutPanel1.TabIndex = 0
         '
-        'Button1
+        'showTestCarsButton
         '
-        Me.Button1.AutoSize = True
-        Me.Button1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
-        Me.Button1.Location = New System.Drawing.Point(3, 3)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(114, 23)
-        Me.Button1.TabIndex = 0
-        Me.Button1.Text = "Test Autos anzeigen"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.showTestCarsButton.AutoSize = True
+        Me.showTestCarsButton.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
+        Me.showTestCarsButton.Location = New System.Drawing.Point(3, 3)
+        Me.showTestCarsButton.Name = "showTestCarsButton"
+        Me.showTestCarsButton.Size = New System.Drawing.Size(114, 23)
+        Me.showTestCarsButton.TabIndex = 0
+        Me.showTestCarsButton.Text = "Test Autos anzeigen"
+        Me.showTestCarsButton.UseVisualStyleBackColor = True
         '
         'Button4
         '
@@ -92,6 +96,28 @@ Partial Class Form1
         Me.Button3.Text = "Speichern..."
         Me.Button3.UseVisualStyleBackColor = True
         '
+        'Button5
+        '
+        Me.Button5.AutoSize = True
+        Me.Button5.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
+        Me.Button5.Location = New System.Drawing.Point(388, 3)
+        Me.Button5.Name = "Button5"
+        Me.Button5.Size = New System.Drawing.Size(71, 23)
+        Me.Button5.TabIndex = 4
+        Me.Button5.Text = "Liste leeren"
+        Me.Button5.UseVisualStyleBackColor = True
+        '
+        'Button6
+        '
+        Me.Button6.AutoSize = True
+        Me.Button6.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
+        Me.Button6.Location = New System.Drawing.Point(465, 3)
+        Me.Button6.Name = "Button6"
+        Me.Button6.Size = New System.Drawing.Size(93, 23)
+        Me.Button6.TabIndex = 5
+        Me.Button6.Text = "Hallo Vererbung"
+        Me.Button6.UseVisualStyleBackColor = True
+        '
         'DataGridView1
         '
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
@@ -123,10 +149,12 @@ Partial Class Form1
     End Sub
 
     Friend WithEvents FlowLayoutPanel1 As FlowLayoutPanel
-    Friend WithEvents Button1 As Button
+    Friend WithEvents showTestCarsButton As Button
     Friend WithEvents Button2 As Button
     Friend WithEvents Button3 As Button
     Friend WithEvents DataGridView1 As DataGridView
     Friend WithEvents Button4 As Button
     Friend WithEvents SaveFileDialog1 As SaveFileDialog
+    Friend WithEvents Button5 As Button
+    Friend WithEvents Button6 As Button
 End Class

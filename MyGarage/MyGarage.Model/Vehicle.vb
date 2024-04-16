@@ -1,4 +1,5 @@
 ﻿Public Class Vehicle
+    Inherits Object
 
     Public Property Manufacturer As String
     Public Property Model As String
@@ -7,12 +8,8 @@
     Public Property Color As String
     Public Property Engine As EngineType
 
-End Class
+    Public Overridable Function GetInfo() As String
+        Return "I'm a vehicle"
+    End Function
 
-Public Enum EngineType
-    Gas
-    Electric
-    Diesel
-    EFuel
-    H2
-End Enum
+End Class
