@@ -23,24 +23,13 @@ Partial Class Form1
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Me.Button2 = New System.Windows.Forms.Button()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.CheckBox1 = New System.Windows.Forms.CheckBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.ListBox1 = New System.Windows.Forms.ListBox()
         Me.Button1 = New System.Windows.Forms.Button()
+        Me.Button2 = New DVDScreensaver.MyButton()
         Me.SuspendLayout()
-        '
-        'Button2
-        '
-        Me.Button2.BackColor = System.Drawing.Color.DarkOrange
-        Me.Button2.Font = New System.Drawing.Font("Microsoft Sans Serif", 25.875!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button2.Location = New System.Drawing.Point(259, 266)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(293, 109)
-        Me.Button2.TabIndex = 1
-        Me.Button2.Text = "❌"
-        Me.Button2.UseVisualStyleBackColor = False
         '
         'Timer1
         '
@@ -90,15 +79,25 @@ Partial Class Form1
         Me.Button1.UseVisualStyleBackColor = True
         Me.Button1.Visible = False
         '
+        'Button2
+        '
+        Me.Button2.BackColor = System.Drawing.Color.Yellow
+        Me.Button2.Location = New System.Drawing.Point(12, 113)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(328, 193)
+        Me.Button2.TabIndex = 6
+        Me.Button2.Text = "MyButton1"
+        Me.Button2.UseVisualStyleBackColor = False
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(12.0!, 25.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.ListBox1)
         Me.Controls.Add(Me.CheckBox1)
-        Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Label1)
         Me.Name = "Form1"
         Me.Text = "Form1"
@@ -106,10 +105,10 @@ Partial Class Form1
         Me.PerformLayout()
 
     End Sub
-    Friend WithEvents Button2 As Button
     Friend WithEvents Timer1 As Timer
     Friend WithEvents CheckBox1 As CheckBox
     Friend WithEvents Label1 As Label
     Friend WithEvents ListBox1 As ListBox
     Friend WithEvents Button1 As Button
+    Friend WithEvents Button2 As MyButton
 End Class

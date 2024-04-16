@@ -15,8 +15,8 @@
         Button2.Left += speedX
         Button2.Top += speedY
 
+        'MyButton1.Width += 1
         Task.Run(Sub() Console.Beep(ran.Next(70, 600), 200))
-
 
         'collision X
         If Button2.Right >= ClientSize.Width Or Button2.Left <= 0 Then
@@ -25,7 +25,7 @@
             Button2.ForeColor = GetRandomColor()
             BackColor = GetRandomColor()
             'Console.Beep(ran.Next(70, 400), 500)
-
+            Button2.Invalidate()
         End If
 
         'collision Y
@@ -36,7 +36,7 @@
             BackColor = GetRandomColor()
 
             'Console.Beep(ran.Next(70, 400), 500)
-
+            Button2.Invalidate()
         End If
 
         'Button label
@@ -57,6 +57,7 @@
         Dim r = ran.Next(256)
         Dim g = ran.Next(256)
         Dim b = ran.Next(256)
+
 
         Return Color.FromArgb(r, g, b)
 
