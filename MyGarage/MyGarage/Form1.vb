@@ -87,26 +87,36 @@ Public Class Form1
 
         If openFileDialog1.ShowDialog() = DialogResult.OK Then
 
-            Dim sr As New StreamReader(openFileDialog1.FileName)
-            Dim liste As New List(Of Vehicle)
-            While Not sr.EndOfStream
+            Try
 
-                Dim line = sr.ReadLine()
-                Dim chunks = line.Split(";"c)
+                Dim sr As New StreamReader(openFileDialog1.FileName)
+                Dim liste As New List(Of Vehicle)
+                While Not sr.EndOfStream
 
-                Dim car = New Vehicle()
-                car.Manufacturer = chunks(0)
-                car.Model = chunks(1)
-                car.KW = Integer.Parse(chunks(2))
-                car.BuildDate = DateTime.Parse(chunks(3))
-                car.Color = chunks(4)
-                car.Engine = CType([Enum].Parse(GetType(EngineType), chunks(5)), EngineType)
-                liste.Add(car)
+                    Dim line = sr.ReadLine()
+                    Dim chunks = line.Split(";"c)
 
-            End While
+                    Dim car = New Vehicle()
+                    car.Manufacturer = chunks(0)
+                    car.Model = chunks(1)
+                    car.KW = Integer.Parse(chunks(2))
+                    car.BuildDate = DateTime.Parse(chunks(3))
+                    car.Color = chunks(4)
+                    car.Engine = CType([Enum].Parse(GetType(EngineType), chunks(5)), EngineType)
+                    liste.Add(car)
 
-            sr.Close()
-            DataGridView1.DataSource = liste
+                End While
+
+                sr.Close()
+                DataGridView1.DataSource = liste
+
+            Catch ex As IOException
+                MessageBox.Show($"Lesefehler: {ex.Message}")
+            Catch ex As FormatException
+                MessageBox.Show($"Dateiinhalt nicht korrekt: {ex.Message}")
+            Catch ex As Exception
+                MessageBox.Show($"Fehler: {ex.Message}")
+            End Try
         End If
 
     End Sub
