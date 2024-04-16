@@ -35,6 +35,10 @@ Public Class Fahrzeug
     End Sub
 
     'konstruktor
+    Sub New() 'default ctor
+
+    End Sub
+
     Sub New(kennzeichen As String)
         Farbe = "pink"
         Me.Kennzeichen = kennzeichen
@@ -51,13 +55,13 @@ Public Class Fahrzeug
     End Sub
 
 
-    'setter methode (unüblich!)
+    'setter methode (unüblich in .NET => property!)
     Public Sub SetFarbe(farbe As String)
         _farbe = farbe
         'Me == this
     End Sub
 
-    'getter function (unüblich!)
+    'getter function (unüblich in .NET => property!)
     Public Function GetFarbe() As String
         Return _farbe
     End Function
