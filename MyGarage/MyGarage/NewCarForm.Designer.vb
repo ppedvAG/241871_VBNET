@@ -243,6 +243,7 @@ Partial Class NewCarForm
         'engineComboBox
         '
         Me.engineComboBox.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.engineComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.engineComboBox.FormattingEnabled = True
         Me.engineComboBox.Location = New System.Drawing.Point(149, 208)
         Me.engineComboBox.Name = "engineComboBox"

@@ -3,6 +3,17 @@ Imports Bogus
 Imports MyGarage.Model
 
 Public Class Form1
+
+
+    Sub New()
+
+        ' This call is required by the designer.
+        InitializeComponent()
+
+        ' Add any initialization after the InitializeComponent() call.
+        DataGridView1.DataSource = BindingSource1
+    End Sub
+
     Private Sub ShowTestCarsButton_Click(sender As Object, e As EventArgs) Handles showTestCarsButton.Click
 
         Dim liste = New List(Of Vehicle)
@@ -36,7 +47,7 @@ Public Class Form1
         liste.Add(v2)
         liste.Add(v3)
 
-        DataGridView1.DataSource = liste
+        BindingSource1.DataSource = liste
 
     End Sub
 
@@ -53,13 +64,13 @@ Public Class Form1
         'faker.RuleFor(Function(c) c.Engine, Function(f) f.Random.Int(0, 4))
         faker.RuleFor(Function(c) c.Engine, Function(f) f.PickRandom(Of EngineType))
 
-        DataGridView1.DataSource = faker.Generate(1000)
+        BindingSource1.DataSource = faker.Generate(1000)
 
     End Sub
 
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
 
-        Dim cars = CType(DataGridView1.DataSource, List(Of Vehicle))
+        Dim cars = CType(BindingSource1.DataSource, List(Of Vehicle))
         If cars IsNot Nothing Then
             If SaveFileDialog1.ShowDialog() = DialogResult.OK Then
 
@@ -108,7 +119,7 @@ Public Class Form1
                 End While
 
                 sr.Close()
-                DataGridView1.DataSource = liste
+                BindingSource1.DataSource = liste
 
             Catch ex As IOException
                 MessageBox.Show($"Lesefehler: {ex.Message}")
@@ -123,7 +134,7 @@ Public Class Form1
 
     Private Sub Button5_Click(sender As Object, e As EventArgs) Handles Button5.Click
 
-        DataGridView1.DataSource = New List(Of Vehicle)
+        BindingSource1.DataSource = New List(Of Vehicle)
 
     End Sub
 
@@ -162,10 +173,12 @@ Public Class Form1
         Dim ncf = New NewCarForm()
         ncf.BackColor = Color.Thistle
         ncf.StartPosition = FormStartPosition.CenterParent
+        ncf.SelectedCar = New Car()
 
         If ncf.ShowDialog() = DialogResult.OK Then
-            Dim nc = ncf.GetCar()
-            AddToListOrCreateNewListToShowCar(nc)
+
+            'AddToListOrCreateNewListToShowCar(nc)
+            BindingSource1.Add(ncf.SelectedCar)
         Else
             MessageBox.Show("😔")
         End If
@@ -184,10 +197,11 @@ Public Class Form1
                 ncf.BackColor = Color.Indigo
                 ncf.StartPosition = FormStartPosition.CenterParent
 
-                ncf.SetCar(selectedCar)
+                ncf.SelectedCar = selectedCar
 
                 If ncf.ShowDialog() = DialogResult.OK Then
-                    AddToListOrCreateNewListToShowCar(ncf.GetCar())
+                    'BindingSource1.Add(ncf.SelectedCar)
+
                 End If
 
             End If
@@ -195,23 +209,26 @@ Public Class Form1
 
     End Sub
 
-    Private Sub AddToListOrCreateNewListToShowCar(nc As Car)
+    'Private Sub AddToListOrCreateNewListToShowCar(nc As Car)
 
-        If DataGridView1.DataSource Is Nothing Then 'new list
-            Dim liste = New List(Of Car)
-            liste.Add(nc)
-            DataGridView1.DataSource = liste
-        Else 'add to list
+    '    If BindingSource1.DataSource Is Nothing Then 'new list
+    '        Dim liste = New List(Of Car)
+    '        liste.Add(nc)
+    '        BindingSource1.DataSource = liste
+    '    Else 'add to list
 
-            Dim carList = TryCast(DataGridView1.DataSource, List(Of Car))
-            If Not carList Is Nothing Then
-                carList.Add(nc)
-                DataGridView1.DataSource = Nothing
-                DataGridView1.DataSource = carList
-            End If
+    '        Dim carList = TryCast(BindingSource1.DataSource, List(Of Car))
+    '        If Not carList Is Nothing Then
+    '            carList.Add(nc)
+    '        End If
 
-        End If
+    '    End If
 
+    'End Sub
+
+    Private Sub Button7_Click(sender As Object, e As EventArgs) Handles Button7.Click
+        Dim aaaa As New HalloBinding()
+        aaaa.ShowDialog()
 
     End Sub
 End Class

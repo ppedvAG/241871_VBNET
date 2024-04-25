@@ -21,6 +21,21 @@ Public Class NewCarForm
 
     End Sub
 
+    Property SelectedCar As Car
+
+    Private Sub NewCarForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+        manufacturerTextBox.DataBindings.Add(NameOf(TextBox.Text), SelectedCar, NameOf(Car.Manufacturer))
+        modelTextBox.DataBindings.Add(NameOf(TextBox.Text), SelectedCar, NameOf(Car.Model))
+        powerNumericUpDown.DataBindings.Add(NameOf(NumericUpDown.Value), SelectedCar, NameOf(Car.KW), True)
+        buildDateTimePicker.DataBindings.Add(NameOf(DateTimePicker.Value), SelectedCar, NameOf(Car.BuildDate), True)
+        colorTextBox.DataBindings.Add(NameOf(TextBox.Text), SelectedCar, NameOf(Car.Color))
+        engineComboBox.DataBindings.Add(NameOf(ComboBox.SelectedItem), SelectedCar, NameOf(Car.Engine), True, DataSourceUpdateMode.OnPropertyChanged)
+        licencePlateMaskedTextBox.DataBindings.Add(NameOf(MaskedTextBox.Text), SelectedCar, NameOf(Car.Kennzeichen), True)
+
+    End Sub
+
+
     Private Sub okButton_Click(sender As Object, e As EventArgs) Handles okButton.Click
 
         DialogResult = DialogResult.OK
@@ -35,28 +50,30 @@ Public Class NewCarForm
 
     End Sub
 
-    Function GetCar() As Car
-        Dim nc = New Car()
 
-        nc.Manufacturer = manufacturerTextBox.Text
-        nc.Model = modelTextBox.Text
-        nc.KW = CType(powerNumericUpDown.Value, Integer)
-        nc.BuildDate = buildDateTimePicker.Value
-        nc.Color = colorTextBox.Text
-        nc.Engine = CType(engineComboBox.SelectedItem, EngineType)
-        nc.Kennzeichen = licencePlateMaskedTextBox.Text
 
-        Return nc
-    End Function
+    'Function GetCar() As Car
+    '    Dim nc = New Car()
 
-    Sub SetCar(car As Car)
-        manufacturerTextBox.Text = car.Manufacturer
-        modelTextBox.Text = car.Model
-        powerNumericUpDown.Value = car.KW
-        buildDateTimePicker.Value = car.BuildDate
-        colorTextBox.Text = car.Color
-        engineComboBox.SelectedItem = car.Engine
-        licencePlateMaskedTextBox.Text = car.Kennzeichen
+    '    nc.Manufacturer = manufacturerTextBox.Text
+    '    nc.Model = modelTextBox.Text
+    '    nc.KW = CType(powerNumericUpDown.Value, Integer)
+    '    nc.BuildDate = buildDateTimePicker.Value
+    '    nc.Color = colorTextBox.Text
+    '    nc.Engine = CType(engineComboBox.SelectedItem, EngineType)
+    '    nc.Kennzeichen = licencePlateMaskedTextBox.Text
 
-    End Sub
+    '    Return nc
+    'End Function
+
+    'Sub SetCar(car As Car)
+    '    manufacturerTextBox.Text = car.Manufacturer
+    '    modelTextBox.Text = car.Model
+    '    powerNumericUpDown.Value = car.KW
+    '    buildDateTimePicker.Value = car.BuildDate
+    '    colorTextBox.Text = car.Color
+    '    engineComboBox.SelectedItem = car.Engine
+    '    licencePlateMaskedTextBox.Text = car.Kennzeichen
+
+    'End Sub
 End Class
