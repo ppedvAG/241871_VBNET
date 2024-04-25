@@ -1,6 +1,8 @@
 ﻿Imports System.IO
 Imports Bogus
 Imports MyGarage.Model
+Imports Newtonsoft
+Imports Newtonsoft.Json
 
 Public Class Form1
 
@@ -229,6 +231,39 @@ Public Class Form1
     Private Sub Button7_Click(sender As Object, e As EventArgs) Handles Button7.Click
         Dim aaaa As New HalloBinding()
         aaaa.ShowDialog()
+
+    End Sub
+
+    Private Sub Button8_Click(sender As Object, e As EventArgs) Handles Button8.Click
+
+        Dim cars = TryCast(BindingSource1.List, IEnumerable(Of Car))
+        If Not cars Is Nothing Then
+            Try
+                Dim json As String = JsonConvert.SerializeObject(cars)
+                File.WriteAllText("cars.json", json)
+                MessageBox.Show("Done")
+            Catch ex As Exception
+                MessageBox.Show($"Fehler: {ex.Message}")
+            End Try
+        Else
+            MessageBox.Show("Keine Autos in der Liste :-(")
+        End If
+
+    End Sub
+
+    Private Sub Button9_Click(sender As Object, e As EventArgs) Handles Button9.Click
+        Try
+            Dim json As String = File.ReadAllText("cars.json")
+            Dim listeOfCars = JsonConvert.DeserializeObject(Of IEnumerable(Of Car))(json)
+
+            For Each car In listeOfCars
+                BindingSource1.Add(car)
+            Next
+
+        Catch ex As Exception
+            MessageBox.Show($"Fehler: {ex.Message}")
+
+        End Try
 
     End Sub
 End Class
