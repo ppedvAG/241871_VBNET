@@ -41,9 +41,10 @@ Partial Class Form1
         Me.CheckBox1.AutoSize = True
         Me.CheckBox1.Checked = True
         Me.CheckBox1.CheckState = System.Windows.Forms.CheckState.Checked
-        Me.CheckBox1.Location = New System.Drawing.Point(151, 35)
+        Me.CheckBox1.Location = New System.Drawing.Point(76, 18)
+        Me.CheckBox1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.CheckBox1.Name = "CheckBox1"
-        Me.CheckBox1.Size = New System.Drawing.Size(97, 29)
+        Me.CheckBox1.Size = New System.Drawing.Size(66, 27)
         Me.CheckBox1.TabIndex = 2
         Me.CheckBox1.Text = "Move"
         Me.CheckBox1.UseVisualStyleBackColor = True
@@ -53,8 +54,9 @@ Partial Class Form1
         Me.Label1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Label1.Font = New System.Drawing.Font("Eras Medium ITC", 36.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.Location = New System.Drawing.Point(0, 0)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(1232, 484)
+        Me.Label1.Size = New System.Drawing.Size(992, 476)
         Me.Label1.TabIndex = 3
         Me.Label1.Text = "Label1"
         Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -62,18 +64,19 @@ Partial Class Form1
         'ListBox1
         '
         Me.ListBox1.FormattingEnabled = True
-        Me.ListBox1.ItemHeight = 25
-        Me.ListBox1.Location = New System.Drawing.Point(578, 57)
+        Me.ListBox1.Location = New System.Drawing.Point(289, 30)
+        Me.ListBox1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.ListBox1.Name = "ListBox1"
-        Me.ListBox1.Size = New System.Drawing.Size(120, 379)
+        Me.ListBox1.Size = New System.Drawing.Size(62, 199)
         Me.ListBox1.TabIndex = 4
         Me.ListBox1.Visible = False
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(348, 12)
+        Me.Button1.Location = New System.Drawing.Point(174, 6)
+        Me.Button1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(195, 82)
+        Me.Button1.Size = New System.Drawing.Size(98, 43)
         Me.Button1.TabIndex = 5
         Me.Button1.Text = "Button1"
         Me.Button1.UseVisualStyleBackColor = True
@@ -82,23 +85,25 @@ Partial Class Form1
         'Button2
         '
         Me.Button2.BackColor = System.Drawing.Color.Yellow
-        Me.Button2.Location = New System.Drawing.Point(106, 152)
+        Me.Button2.Location = New System.Drawing.Point(53, 79)
+        Me.Button2.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(328, 193)
+        Me.Button2.Size = New System.Drawing.Size(164, 100)
         Me.Button2.TabIndex = 6
         Me.Button2.Text = "MyButton1"
         Me.Button2.UseVisualStyleBackColor = False
         '
         'Form1
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(12.0!, 25.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1232, 484)
+        Me.ClientSize = New System.Drawing.Size(992, 476)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.ListBox1)
         Me.Controls.Add(Me.CheckBox1)
         Me.Controls.Add(Me.Label1)
+        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Name = "Form1"
         Me.Text = "Form1"
         Me.ResumeLayout(False)

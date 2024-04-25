@@ -31,6 +31,7 @@ Partial Class Form1
         Me.Button6 = New System.Windows.Forms.Button()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.SaveFileDialog1 = New System.Windows.Forms.SaveFileDialog()
+        Me.Button1 = New System.Windows.Forms.Button()
         Me.FlowLayoutPanel1.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -46,19 +47,22 @@ Partial Class Form1
         Me.FlowLayoutPanel1.Controls.Add(Me.Button3)
         Me.FlowLayoutPanel1.Controls.Add(Me.Button5)
         Me.FlowLayoutPanel1.Controls.Add(Me.Button6)
+        Me.FlowLayoutPanel1.Controls.Add(Me.Button1)
         Me.FlowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Top
         Me.FlowLayoutPanel1.Location = New System.Drawing.Point(0, 0)
+        Me.FlowLayoutPanel1.Margin = New System.Windows.Forms.Padding(6, 6, 6, 6)
         Me.FlowLayoutPanel1.Name = "FlowLayoutPanel1"
-        Me.FlowLayoutPanel1.Size = New System.Drawing.Size(800, 29)
+        Me.FlowLayoutPanel1.Size = New System.Drawing.Size(1600, 47)
         Me.FlowLayoutPanel1.TabIndex = 0
         '
         'showTestCarsButton
         '
         Me.showTestCarsButton.AutoSize = True
         Me.showTestCarsButton.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
-        Me.showTestCarsButton.Location = New System.Drawing.Point(3, 3)
+        Me.showTestCarsButton.Location = New System.Drawing.Point(6, 6)
+        Me.showTestCarsButton.Margin = New System.Windows.Forms.Padding(6, 6, 6, 6)
         Me.showTestCarsButton.Name = "showTestCarsButton"
-        Me.showTestCarsButton.Size = New System.Drawing.Size(114, 23)
+        Me.showTestCarsButton.Size = New System.Drawing.Size(219, 35)
         Me.showTestCarsButton.TabIndex = 0
         Me.showTestCarsButton.Text = "Test Autos anzeigen"
         Me.showTestCarsButton.UseVisualStyleBackColor = True
@@ -67,9 +71,10 @@ Partial Class Form1
         '
         Me.Button4.AutoSize = True
         Me.Button4.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
-        Me.Button4.Location = New System.Drawing.Point(123, 3)
+        Me.Button4.Location = New System.Drawing.Point(237, 6)
+        Me.Button4.Margin = New System.Windows.Forms.Padding(6, 6, 6, 6)
         Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(117, 23)
+        Me.Button4.Size = New System.Drawing.Size(226, 35)
         Me.Button4.TabIndex = 3
         Me.Button4.Text = "Test Autos mit Bogus"
         Me.Button4.UseVisualStyleBackColor = True
@@ -78,9 +83,10 @@ Partial Class Form1
         '
         Me.Button2.AutoSize = True
         Me.Button2.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
-        Me.Button2.Location = New System.Drawing.Point(246, 3)
+        Me.Button2.Location = New System.Drawing.Point(475, 6)
+        Me.Button2.Margin = New System.Windows.Forms.Padding(6, 6, 6, 6)
         Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(56, 23)
+        Me.Button2.Size = New System.Drawing.Size(100, 35)
         Me.Button2.TabIndex = 1
         Me.Button2.Text = "Laden..."
         Me.Button2.UseVisualStyleBackColor = True
@@ -89,9 +95,10 @@ Partial Class Form1
         '
         Me.Button3.AutoSize = True
         Me.Button3.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
-        Me.Button3.Location = New System.Drawing.Point(308, 3)
+        Me.Button3.Location = New System.Drawing.Point(587, 6)
+        Me.Button3.Margin = New System.Windows.Forms.Padding(6, 6, 6, 6)
         Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(74, 23)
+        Me.Button3.Size = New System.Drawing.Size(137, 35)
         Me.Button3.TabIndex = 2
         Me.Button3.Text = "Speichern..."
         Me.Button3.UseVisualStyleBackColor = True
@@ -100,9 +107,10 @@ Partial Class Form1
         '
         Me.Button5.AutoSize = True
         Me.Button5.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
-        Me.Button5.Location = New System.Drawing.Point(388, 3)
+        Me.Button5.Location = New System.Drawing.Point(736, 6)
+        Me.Button5.Margin = New System.Windows.Forms.Padding(6, 6, 6, 6)
         Me.Button5.Name = "Button5"
-        Me.Button5.Size = New System.Drawing.Size(71, 23)
+        Me.Button5.Size = New System.Drawing.Size(134, 35)
         Me.Button5.TabIndex = 4
         Me.Button5.Text = "Liste leeren"
         Me.Button5.UseVisualStyleBackColor = True
@@ -111,9 +119,10 @@ Partial Class Form1
         '
         Me.Button6.AutoSize = True
         Me.Button6.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
-        Me.Button6.Location = New System.Drawing.Point(465, 3)
+        Me.Button6.Location = New System.Drawing.Point(882, 6)
+        Me.Button6.Margin = New System.Windows.Forms.Padding(6, 6, 6, 6)
         Me.Button6.Name = "Button6"
-        Me.Button6.Size = New System.Drawing.Size(93, 23)
+        Me.Button6.Size = New System.Drawing.Size(177, 35)
         Me.Button6.TabIndex = 5
         Me.Button6.Text = "Hallo Vererbung"
         Me.Button6.UseVisualStyleBackColor = True
@@ -122,22 +131,37 @@ Partial Class Form1
         '
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.DataGridView1.Location = New System.Drawing.Point(0, 29)
+        Me.DataGridView1.Location = New System.Drawing.Point(0, 47)
+        Me.DataGridView1.Margin = New System.Windows.Forms.Padding(6, 6, 6, 6)
         Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(800, 421)
+        Me.DataGridView1.RowHeadersWidth = 82
+        Me.DataGridView1.Size = New System.Drawing.Size(1600, 818)
         Me.DataGridView1.TabIndex = 1
         '
         'SaveFileDialog1
         '
         Me.SaveFileDialog1.Filter = "CSV Datei|*.csv|Alle Dateien|*.*"
         '
+        'Button1
+        '
+        Me.Button1.AutoSize = True
+        Me.Button1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
+        Me.Button1.Location = New System.Drawing.Point(1071, 6)
+        Me.Button1.Margin = New System.Windows.Forms.Padding(6)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(152, 35)
+        Me.Button1.TabIndex = 6
+        Me.Button1.Text = "Neues Auto..."
+        Me.Button1.UseVisualStyleBackColor = True
+        '
         'Form1
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(12.0!, 25.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.ClientSize = New System.Drawing.Size(1600, 865)
         Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.FlowLayoutPanel1)
+        Me.Margin = New System.Windows.Forms.Padding(6, 6, 6, 6)
         Me.Name = "Form1"
         Me.Text = "Form1"
         Me.FlowLayoutPanel1.ResumeLayout(False)
@@ -157,4 +181,5 @@ Partial Class Form1
     Friend WithEvents SaveFileDialog1 As SaveFileDialog
     Friend WithEvents Button5 As Button
     Friend WithEvents Button6 As Button
+    Friend WithEvents Button1 As Button
 End Class

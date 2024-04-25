@@ -156,4 +156,62 @@ Public Class Form1
 
         'MessageBox.Show(veh.Manufacturer & " " & veh.GetInfo())
     End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+
+        Dim ncf = New NewCarForm()
+        ncf.BackColor = Color.Thistle
+        ncf.StartPosition = FormStartPosition.CenterParent
+
+        If ncf.ShowDialog() = DialogResult.OK Then
+            Dim nc = ncf.GetCar()
+            AddToListOrCreateNewListToShowCar(nc)
+        Else
+            MessageBox.Show("😔")
+        End If
+
+    End Sub
+
+
+
+    Private Sub DataGridView1_CellDoubleClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellDoubleClick
+
+        If Not DataGridView1.CurrentRow Is Nothing Then 'nix machen, liste leer
+            Dim selectedCar = TryCast(DataGridView1.CurrentRow.DataBoundItem, Car)
+
+            If Not selectedCar Is Nothing Then
+                Dim ncf = New NewCarForm()
+                ncf.BackColor = Color.Indigo
+                ncf.StartPosition = FormStartPosition.CenterParent
+
+                ncf.SetCar(selectedCar)
+
+                If ncf.ShowDialog() = DialogResult.OK Then
+                    AddToListOrCreateNewListToShowCar(ncf.GetCar())
+                End If
+
+            End If
+        End If
+
+    End Sub
+
+    Private Sub AddToListOrCreateNewListToShowCar(nc As Car)
+
+        If DataGridView1.DataSource Is Nothing Then 'new list
+            Dim liste = New List(Of Car)
+            liste.Add(nc)
+            DataGridView1.DataSource = liste
+        Else 'add to list
+
+            Dim carList = TryCast(DataGridView1.DataSource, List(Of Car))
+            If Not carList Is Nothing Then
+                carList.Add(nc)
+                DataGridView1.DataSource = Nothing
+                DataGridView1.DataSource = carList
+            End If
+
+        End If
+
+
+    End Sub
 End Class
