@@ -50,6 +50,13 @@ Public Class NewCarForm
 
     End Sub
 
+    Private Sub engineComboBox_SelectedIndexChanged(sender As Object, e As EventArgs) Handles engineComboBox.SelectedIndexChanged
+
+        For Each b As Binding In engineComboBox.DataBindings
+            b.WriteValue()
+        Next
+    End Sub
+
 
 
     'Function GetCar() As Car
